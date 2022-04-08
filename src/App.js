@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import Details from "./Component/Details";
-import Main from "./Component/Main";
 import BackToTop from './Component/BackToTop'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { green, purple } from "@mui/material/colors";
-import ContextProvider from "./Component/Context/ContextProvider";
+import { purple } from "@mui/material/colors";
+import React, { Suspense, useContext } from "react";
+import ContextApi from "./Component/Context/ContextAPI";
+
 function App() {
+    const darkMode = useContext(ContextApi).darkMode;
     const theme = createTheme({
       palette: {
+        mode:  darkMode ? 'dark' : 'light',
       primary:{
         main: '#fefefe'
       },
@@ -22,17 +24,20 @@ function App() {
     }
   });
 
-    // const Home = React.lazy(()=> import('./Component/Main'));
+    const Home = React.lazy(()=> import('./Component/Main'));
+    const Details = React.lazy(()=> import('./Component/Details'));
   return (
-    <ContextProvider>
+    <>
     <ThemeProvider theme={theme} >
     <BackToTop/>
+      <Suspense fallback={<span>...Loading</span>}>
       <Routes>
-        <Route path='/' element={<Main/>} />
-        <Route path='/:details' element={<Details/>} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/:details' element={<Details/>}/>
       </Routes>
+      </Suspense>
     </ThemeProvider>
-    </ContextProvider>
+    </>
   );
 }
 

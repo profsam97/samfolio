@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Grid from '@mui/material/Grid'
 import Typo from './Layout/Typo';
 import ContextApi from './Context/ContextAPI'
-import { Container, Typography, Paper } from '@mui/material';
+import { Typography, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import ProgressBar from './ProgressBar';
 
@@ -31,7 +31,8 @@ const About = () => {
             <Grid item container direction='column' spacing={1} >
                         <Grid item container spacing={0}>
                         <Grid item xs={12} sm={4} md={4} lg={4} xl={3}>         
-                       <img src={require('../assets/img/profs.jpg') }
+                       <img src='../assets/img/profs.jpg'
+                       alt='My'
                         className={classes.aboutImg} />
                         </Grid>
                         <Grid  item xs={0} sm={1.5} md={2.5} lg={1} xl={1}/>

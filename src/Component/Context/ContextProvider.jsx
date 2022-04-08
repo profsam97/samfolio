@@ -1,11 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import ContextApi from './ContextAPI'
 const ContextProvider = (props) => {
     const About = useRef(null)
     const Contact = useRef(null);
     const Service = useRef(null);
     const Work = useRef(null);
-
+      const [darkMode, setDarkMode] = useState(false);
+      const toggleMode = () => {
+        setDarkMode(curMode => !curMode);
+      }
     const ScrollToSection = (page) => {
     switch(page) {
       case 'About': 
@@ -29,6 +32,8 @@ const ContextProvider = (props) => {
         Service,
         Work,
         Contact,
+        darkMode,
+        toggleMode,
         ScrollToSection
     } 
   return (

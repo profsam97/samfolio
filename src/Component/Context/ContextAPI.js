@@ -4,6 +4,8 @@ const ContextApi = React.createContext({
   Service: null,
   Work: null,
   Contact: null,
+  darkMode: false,
+  toggleMode: () => {},
   ScrollToSection: () => {}
 })
 export default ContextApi;

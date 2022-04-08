@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useRef}  from 'react';
+import React, {useCallback, useContext, useEffect, useRef, useState}  from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,8 +13,10 @@ import Typo from './Typo';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { makeStyles } from '@mui/styles';
 import ContextApi from '../Context/ContextAPI'
+import { Tooltip } from '@mui/material';
+import { DarkMode, LightMode } from '@mui/icons-material';
 const pages = ['Home', 'About', 'Services', 'Work', 'Contact'];
-const useStyle = makeStyles({
+  const useStyle = makeStyles({
     menuItem1: {
     '&:hover' :{
     textDecoration: 'underline',
@@ -27,51 +29,62 @@ const useStyle = makeStyles({
     position: "sticky",
     top: "1rem",
     minWidth: "275"
-  }
+  },
 })
-const Nav = (props) => {
+const Nav = () => {
   const classes = useStyle();  
   const matches = useMediaQuery('(min-width:900px)');
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const scrollToContent = useContext(ContextApi).ScrollToSection;
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
- 
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
   const ScrollToComponent = page =>{
       scrollToContent(page);
-      // setShowMenu(null);
-    //   setTimeout(() => {
-    // setAnchorElNav(null);
-    //   }, 1000);
+
   }
-  const nav = useRef();
-    const headerScrolled = useCallback(() => {
+    const nav = useRef();
+    const [appColor, setAppColor] = useState('transparent');
+    const darkMode = useContext(ContextApi).darkMode;
+    const toggle = useContext(ContextApi).toggleMode;
+    useEffect(() => {
       if (window.scrollY > 100) {
-        nav.current.classList.add('header-scrolled')
+     if(!darkMode){
+       setAppColor('secondary')
+     }    
+    }
+    }, [darkMode])
+    const headerScrolled = useCallback(() => {
+
+       if (window.scrollY > 100) {
+       setAppColor('secondary')
+        nav.current.classList.add(
+          darkMode ? 'header-scrolled2' : 'header-scrolled'
+        );
       } else {
-        nav.current.classList.remove('header-scrolled')
+        setAppColor('transparent')
+        nav.current.classList.remove(
+         darkMode ? 'header-scrolled2' : 'header-scrolled'
+        );
       }
-    },[])
+    },[darkMode, setAppColor])
     useEffect(()=> {
     window.addEventListener('scroll', headerScrolled)
       return (()=> {
      window.removeEventListener('scroll', headerScrolled)
       })
-    }, [headerScrolled])
+    }, [headerScrolled, darkMode])
+        const toggleMode = () => {
+            toggle();
+          setAppColor('secondary')
+        }
   return (
-    <AppBar position='sticky' ref={nav}  color='transparent' elevation={0}>
+    <AppBar position='sticky' ref={nav}    color={appColor} elevation={0}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           {matches &&  <Typo  
@@ -135,6 +148,16 @@ const Nav = (props) => {
                 {page}
               </Button>
             ))}
+          </Box>
+          <Box style={{cursor : 'pointer'}} onClick={toggleMode}>
+            {darkMode ? 
+            <Tooltip title='switch to light mode'>
+            <DarkMode   />
+            </Tooltip> :
+            <Tooltip title='switch to dark mode'>
+            <LightMode />
+            </Tooltip>
+            }
           </Box>
         </Toolbar>
       </Container>

@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-
+import SimpleReactLightbox from 'simple-react-lightbox'
+import ContextProvider from './Component/Context/ContextProvider';
 ReactDOM.render(
+  <SimpleReactLightbox>
+    <ContextProvider>
   <BrowserRouter>
        <App />
-  </BrowserRouter>,
+  </BrowserRouter>
+  </ContextProvider>
+  </SimpleReactLightbox>,
   document.getElementById('root')
 );
 

@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import BackToTop from './BackToTop'
 import DetailsSub from './DetailsSub'
 import Footer from './Footer'
 import Nav2 from './Layout/Nav2'

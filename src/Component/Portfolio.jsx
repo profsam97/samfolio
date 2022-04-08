@@ -5,6 +5,7 @@ import Typo from './Layout/Typo'
 import Work from './Work'
 import PortDetails from '../Data/PortDetails'
 import ContextApi from './Context/ContextAPI'
+import { SRLWrapper } from 'simple-react-lightbox';
 const useStyle = makeStyles({
  container : {
         padding: 40,
@@ -26,18 +27,19 @@ const Portfolio = () => {
             <Grid item xs={2}/>
             <div className='line-mf'></div>
             <Grid item xs={6}>
-                               <Grid item container spacing={2}>
+                           <SRLWrapper>
+                        <Grid item container spacing={2}>
                     {PortDetails.map(item => {
                     const {image, SubTitle, Title, date} = item;
                     return (
-                      <Grid item xs={12} sm={4} key={Title} >
+                      <Grid item xs={12} md={4} sm={6} key={Title} >
                         <Work date={date} subTitle={SubTitle} image={image} title={Title}/>
                     </Grid>
                     )
                     
                     })}
-      
                 </Grid>
+              </SRLWrapper>
             </Grid>
 
         </Grid>

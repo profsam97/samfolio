@@ -5,17 +5,27 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { makeStyles } from '@mui/styles'
-import React, { useContext, useEffect } from 'react'
+import React, { useContext} from 'react'
 import MessageItems from './Message'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import { Link } from 'react-router-dom';
 import ContextApi from './Context/ContextAPI';
-const useStyle =  makeStyles({
+
+const Contact = () => {
+  const darkMode = useContext(ContextApi).darkMode;
+  const useStyle =  makeStyles({
     container : {
-        padding: 50
+        padding: 50,
+    },
+    boxShadow: {
+  padding: 22,
+  position: 'relative',
+  backgroundColor: darkMode ? 'black' : 'white' ,
+  marginBottom: 24,
+  marginTop: 40,
+  zIndex: 2,
+  boxShadow: `0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)`
     }
 })
-const Contact = () => {
   const handleLink = path => {
       window.open(path, '_blank')
     }
@@ -25,7 +35,7 @@ const Contact = () => {
     <Paper ref={contact} className='paralax-mf  bg-image2'  elevation={0}>
     <span className="overlay-mf"></span>
     <Container  className={classes.container}>
-        <Grid container  spacing={3}  className='box-shadow-full'>
+        <Grid container  spacing={3}  className={classes.boxShadow}>
         <Grid item xs={12} sm={6} >
     
        <Typography mb={4} className='title-left' variant='h4'><b> Send Message</b></Typography>

@@ -1,0 +1,27 @@
+@media (min-width: 1300px) {
+    .works {
+       height: 250px !important;
+       width: 450px !important; 
+    }
+}
+.works {
+  -webkit-animation: works 0.5s ease;
+  animation: works 0.5s ease;
+}
+@-webkit-keyframes works {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes works {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

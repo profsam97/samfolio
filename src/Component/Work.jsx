@@ -1,8 +1,8 @@
 import { AddBoxOutlined } from '@mui/icons-material';
-import {  Card, CardActionArea, CardContent, CardHeader, Paper, Typography, CardMedia, Grid } from '@mui/material'
+import {  Card, CardActionArea, CardContent, CardHeader, Typography,  Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles'
+import styles from './Work.module.css';
 import { Link } from 'react-router-dom';
-// import { SRLWrapper } from 'simple-react-lightbox';
 const useStyle = makeStyles({
   container : {
     marginBottom : 15
@@ -26,11 +26,9 @@ const Work = (props) => {
                 <Typography variant='h6' component="div" >
                   {title}
               </Typography>
-              {/* <SRLWrapper> */}
       <a href={image}>
-        <img src={image} alt='work' style={{height: '200px', width: '350px'}}/>      </a>
-      {/* </SRLWrapper> */}
-             
+        <img src={image} className={styles.works} alt='work' style={{height: '200px', width: '350px'}}/>    
+        </a>             
               <Grid container>
                   <Grid item xs={8} mt={1}  >
                     <Typography variant='subtitle2' >

@@ -21,9 +21,6 @@ const BackToTopOverlay = () => {
      }
       }, [toggleBacktotop]
   )
-  if(isActive){
-    console.log('true');
-  }
   const classes = isActive ? 'back-to-top active' : 'back-to-top';
   return (
     <>
