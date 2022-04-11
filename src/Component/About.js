@@ -26,9 +26,9 @@ const About = () => {
     const classes = useStyle();
   return (
         <Paper ref={About}  className={classes.container} elevation={2}>
-     <Grid container  m={2} p={2} elevation={5} spacing={3}>
+     <Grid container  m={2} p={2} elevation={5} spacing={{xs:0, sm:2, md: 3}}>
         <Grid item xs={12} md={6}>
-            <Grid item container direction='column' spacing={1} >
+            <Grid item container direction='column' spacing={{xs:0, sm:1, md: 2}} >
                         <Grid item container spacing={0}>
                         <Grid item xs={12} sm={4} md={4} lg={4} xl={3}>         
                        <img src='../assets/img/profs.jpg'

@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple } from "@mui/material/colors";
 import React, { Suspense, useContext } from "react";
 import ContextApi from "./Component/Context/ContextAPI";
-
+import Loading from "./Component/UI/Loading";
 function App() {
     const darkMode = useContext(ContextApi).darkMode;
     const theme = createTheme({
@@ -30,7 +30,7 @@ function App() {
     <>
     <ThemeProvider theme={theme} >
     <BackToTop/>
-      <Suspense fallback={<span>...Loading</span>}>
+      <Suspense fallback={<Loading/>}>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/:details' element={<Details/>}/>

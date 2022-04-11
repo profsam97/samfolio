@@ -8,8 +8,8 @@ import ContextApi from './Context/ContextAPI'
 import { SRLWrapper } from 'simple-react-lightbox';
 const useStyle = makeStyles({
  container : {
-        padding: 40,
-        margin: 40
+        padding: 30,
+        margin: 30
     }
 })
 const Portfolio = () => {

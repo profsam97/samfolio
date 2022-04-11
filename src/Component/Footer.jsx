@@ -3,14 +3,11 @@ import { Container, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
+import styles from './Footer.module.css'
 const useStyle = makeStyles({
     container : {
         paddingTop: 14,
         paddingBottom: 2
-    },
-    footer: {
-        borderTop: 5,
-        borderRadius: 2
     },
     hearts: {
         color: 'red'
@@ -19,7 +16,7 @@ const useStyle = makeStyles({
 const Footer = () => {
     const classes = useStyle();
   return (
-    <footer className={classes.footer} >
+    <footer className={styles.footer} >
         <Container className={classes.container}>
             <Typography variant='p'>
                 &copy; Copyright <strong>Samfolio.</strong> All rights Reserved

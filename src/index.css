@@ -61,7 +61,7 @@ body {
 }
 @media (max-width: 600px) {
     .bg-image2 {
-      min-height: 1000px;
+      min-height: 1050px;
     };
     .overlay-mf {
   background-color: #0078ff;
@@ -76,6 +76,28 @@ body {
   opacity: 0.6;
 };
 
+}
+@media (max-width: 450px) {
+    .overlay-mf {
+  position: absolute;
+  top: 1;
+  left: 0px;
+  padding: 0;
+  height: 136.7% !important;
+  width: 100%;
+  opacity: 0.6;
+};
+}
+@media (max-width: 350px) {
+    .overlay-mf {
+  position: absolute;
+  top: 1;
+  left: 0px;
+  padding: 0;
+  height: 136.6% !important;
+  width: 100%;
+  opacity: 0.6;
+};
 }
 .paralax-mf {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
@@ -217,6 +239,7 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
 .ico-circle {
   height: 40px;
   width: 40px;
