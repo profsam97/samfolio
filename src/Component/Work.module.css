@@ -10,6 +10,12 @@
        width: 300px !important; 
     }
 }
+@media (max-width: 400px) {
+    .works {
+       height: 200px !important;
+       width: 280px !important; 
+    }
+}
 .works {
   -webkit-animation: works 0.5s ease;
   animation: works 0.5s ease;

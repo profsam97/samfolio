@@ -5,10 +5,7 @@ import {faHeart} from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import styles from './Footer.module.css'
 const useStyle = makeStyles({
-    container : {
-        paddingTop: 14,
-        paddingBottom: 2
-    },
+
     hearts: {
         color: 'red'
     }

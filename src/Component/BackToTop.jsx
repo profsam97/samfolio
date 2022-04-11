@@ -21,7 +21,8 @@ const BackToTopOverlay = () => {
      }
       }, [toggleBacktotop]
   )
-  const classes = isActive ? 'back-to-top active' : 'back-to-top';
+
+  const classes = isActive ? 'back-to-top active' : 'back-to-top ';
   return (
     <>
     <div className={classes} onClick={scrollTop}>

@@ -12,10 +12,14 @@ import ContextApi from './Context/ContextAPI';
 
 const Contact = () => {
   const darkMode = useContext(ContextApi).darkMode;
-  const useStyle =  makeStyles({
+  const useStyle =  makeStyles(theme=>({
     container : {
         padding: 50,
+    [theme.breakpoints.down('sm')]:{
+     padding: 30  
+    }
     },
+ 
     boxShadow: {
   padding: 22,
   position: 'relative',
@@ -25,7 +29,7 @@ const Contact = () => {
   zIndex: 2,
   boxShadow: `0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2)`
     }
-})
+}))
   const handleLink = path => {
       window.open(path, '_blank')
     }

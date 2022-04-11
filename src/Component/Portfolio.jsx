@@ -6,12 +6,16 @@ import Work from './Work'
 import PortDetails from '../Data/PortDetails'
 import ContextApi from './Context/ContextAPI'
 import { SRLWrapper } from 'simple-react-lightbox';
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme=>({
  container : {
         padding: 30,
-        margin: 30
+        margin: 30,
+        [theme.breakpoints.down('sm')]:{
+           padding: 10,
+           margin: 10,
+        }
     }
-})
+}))
 const Portfolio = () => {
     const classes = useStyle();
     const port = useContext(ContextApi).Work;
