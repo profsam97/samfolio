@@ -16,11 +16,11 @@ const Contact = () => {
     container : {
         padding: 50,
     [theme.breakpoints.down('sm')]:{
-     padding: 30  
+     padding: 30,
+     marginLeft: 10
     },
      [theme.breakpoints.down('xs')]:{
      padding: 10,
-     margin: 50  
     }
     },
  
