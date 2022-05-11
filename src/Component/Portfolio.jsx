@@ -11,8 +11,8 @@ const useStyle = makeStyles(theme=>({
         padding: 30,
         margin: 30,
         [theme.breakpoints.down('sm')]:{
-           padding: 10,
-           margin: 10,
+           padding: 5,
+           margin: 5,
         }
     }
 }))

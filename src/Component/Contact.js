@@ -17,6 +17,10 @@ const Contact = () => {
         padding: 50,
     [theme.breakpoints.down('sm')]:{
      padding: 30  
+    },
+     [theme.breakpoints.down('xs')]:{
+     padding: 10,
+     margin: 50  
     }
     },
  

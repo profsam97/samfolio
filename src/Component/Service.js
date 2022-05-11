@@ -5,12 +5,16 @@ import Typo from './Layout/Typo'
 import ServicesCard from './ServicesCard'
 import services from '../Data/Services'
 import ContextApi from './Context/ContextAPI'
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
  container : {
         padding: 40,
-        margin: 40
+        margin: 40,
+        [theme.breakpoints.down('sm')]: {
+        padding: 5,
+        margin:  5,
+        }
     }
-})
+}))
 const Service = () => {
     const service = useContext(ContextApi).Service;
     const classes = useStyle();
