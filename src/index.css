@@ -66,17 +66,19 @@ body {
     .overlay-mf {
   background-color: #0078ff;
 }
-  .overlay-mf {
+}
+
+@media (max-width: 600px) {
+    .overlay-mf {
   position: absolute;
   top: 1;
   left: 0px;
   padding: 0;
-  height: 1050px !important;
+  height: 1051px !important;
   width: 100%;
   opacity: 0.6;
 };
 }
-
 @media (max-width: 330px) {
     .overlay-mf {
   position: absolute;
