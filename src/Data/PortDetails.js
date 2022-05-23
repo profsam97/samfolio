@@ -8,6 +8,7 @@ const PortDetails = [
     info: {
      Category: 'Web design',
      Client: 'Freelance',
+     url: '#'
     },
     images: [
         '../assets/img/Portfolio/movi.png',
@@ -25,6 +26,7 @@ const PortDetails = [
     info: {
      Category: 'Web design',
      Client: 'Sunday',
+     url: '#'
     },
     images: [
          '../assets/img/Portfolio/chatCont.png',
@@ -42,6 +44,7 @@ const PortDetails = [
     info: {
      Category: 'Web design',
      Client: 'Gbolahan',
+     url: '#'
     },
     images: [
          '../assets/img/Portfolio/lms.png',
@@ -51,33 +54,39 @@ const PortDetails = [
     ],
     image: '../assets/img/Portfolio/lms.png'
     },
+           {
+    Title :  'Online Complaints System',
+    SubTitle: 'OSC',
+    description: "A web app which allows student to complain about poor grades.",
+    date: 'May 16, 2022',
+    info: {
+     Category: 'Web development',
+     Client: 'Gbolahan',
+     url: 'https://oscs.vercel.app/'
+    },
+    images: [
+         '../assets/img/Portfolio/osc1.png',
+         '../assets/img/Portfolio/osc2.png',
+         '../assets/img/Portfolio/osc3.png',
+         '../assets/img/Portfolio/osc.png'
+    ],
+    image: '../assets/img/Portfolio/osc1.png'
+    },
        {
-    Title :  'A Fibonacci Calculator',
-    SubTitle: 'Devops',
-    description: "A Multi-containerized app built with docker and Kubernetes.",
+    Title :  'bOnline-The best phone System',
+    SubTitle: 'bOnline',
+    description: "Designed a rich and intuitive ui dashboard for bOnline.",
     date: '04 March, 2021',
     info: {
      Category: 'Web design',
-     Client: 'Freelance',
+     Client: 'bOnline',
+     url:  'https://bonline.netlify.app/about/'
     },
     images: [
-         '../assets/img/Portfolio/docKub.png'
+         '../assets/img/Portfolio/bOnline2.png',
+          '../assets/img/Portfolio/bOnline.png',
     ],
-    image: '../assets/img/Portfolio/docKub.png'
-    },
-       {
-    Title :  'Web',
-    SubTitle: 'GIG',
-    description: "A Portfolio of a client.",
-    date: 'May 22, 2021',
-    info: {
-     Category: 'Web design',
-     Client: 'Gbolahan',
-    },
-    images: [
-         '../assets/img/Portfolio/gig.png'
-    ],
-    image: '../assets/img/Portfolio/gig.png'
+    image: '../assets/img/Portfolio/bOnline2.png'
     },
        {
     Title :  'GIG',
@@ -87,11 +96,12 @@ const PortDetails = [
     info: {
      Category: 'Web design',
      Client: 'Freelance',
+     url: '#'
     },
     images: [
-         '../assets/img/Portfolio/myGig.png'
+         '../assets/img/Portfolio/gig.png'
     ],
-    image: '../assets/img/Portfolio/myGig.png'
+    image: '../assets/img/Portfolio/gig.png'
     }
 ]
 export default PortDetails;

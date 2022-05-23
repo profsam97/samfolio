@@ -22,7 +22,7 @@ const PortfolioDetails = () => {
 const params = useParams();
 const title = params.details;
 const filteredImages = imageCollection.filter(image => image.Title === title);
-const {images} = filteredImages[0];
+const {images, date, SubTitle} = filteredImages[0];
     const classes = useStyle();
   return (
     <Paper className= {classes.container} elevation={0}>
@@ -40,7 +40,8 @@ const {images} = filteredImages[0];
                  <ul className={classes.list}>
                  <li><Typography variant='body1'><b>Category: </b>{filteredImages[0].info.Category}</Typography></li> 
                  <li><Typography variant='body1'><b>Client: </b>{filteredImages[0].info.Client}</Typography></li>
-                 <li><Typography variant='body1'><b>Project Date: </b>{filteredImages[0].date}</Typography></li>          
+                 <li><Typography variant='body1'><b>Project Date: </b>{date}</Typography></li>  
+                 <li><Typography variant='body1'><b>Url :<a href={filteredImages[0].info.url} rel='noreferrer' target='_blank'>{SubTitle}</a></b></Typography></li> 
                 </ul>
                     </Grid>    
                        <Grid item xs={6}>
