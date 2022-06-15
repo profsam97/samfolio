@@ -24,6 +24,7 @@ const title = params.details;
 const filteredImages = imageCollection.filter(image => image.Title === title);
 const {images, date, SubTitle} = filteredImages[0];
     const classes = useStyle();
+    console.log(filteredImages[0].info.url === '#' ? 'yes' : 'no')
   return (
     <Paper className= {classes.container} elevation={0}>
         <Container>
@@ -41,7 +42,9 @@ const {images, date, SubTitle} = filteredImages[0];
                  <li><Typography variant='body1'><b>Category: </b>{filteredImages[0].info.Category}</Typography></li> 
                  <li><Typography variant='body1'><b>Client: </b>{filteredImages[0].info.Client}</Typography></li>
                  <li><Typography variant='body1'><b>Project Date: </b>{date}</Typography></li>  
-                 <li><Typography variant='body1'><b>Url :<a href={filteredImages[0].info.url} rel='noreferrer' target='_blank'>{SubTitle}</a></b></Typography></li> 
+                 {filteredImages[0].info.url !== '#' &&
+                 <li><Typography variant='body1'><b>Url :<a href={filteredImages[0].info.url} rel='noreferrer' target='_blank'>{SubTitle}</a></b></Typography></li>
+                 }  
                 </ul>
                     </Grid>    
                        <Grid item xs={6}>
