@@ -19,22 +19,21 @@ const PortDetails = [
     image: '../assets/img/Portfolio/movi.png'
     },
         {
-    Title :  'Chat one',
-    SubTitle: 'A web Whatsapp',
-    description: "A mobile-friendly web-app that allows users to chat with their contact list, share and view status with friends , also provides a real time notification.",
-    date: '14 Sep. 2021',
+    Title :  'Loom Kitchen',
+    SubTitle: 'A Restaurant based App',
+    description: "A resturant web application that allows users to search for resturant and get the location, users can also bookmark resturant.",
+    date: '30 June, 2022',
     info: {
      Category: 'Web design',
-     Client: 'Sunday',
-     url: '#'
+     Client: 'Loom Kitchen',
+     url: 'https://loom-kitchen.vercel.app/'
     },
     images: [
-         '../assets/img/Portfolio/chatCont.png',
-         '../assets/img/Portfolio/chatone.png',
-         '../assets/img/Portfolio/chats.png',
-         '../assets/img/Portfolio/chat.png'
+         '../assets/img/Portfolio/resturant.png',
+         '../assets/img/Portfolio/resturant2.png',
+         '../assets/img/Portfolio/resurant3.png',
     ],
-    image: '../assets/img/Portfolio/chatCont.png'
+    image: '../assets/img/Portfolio/resturant.png'
     },
        {
     Title :  'Online Learning System',
