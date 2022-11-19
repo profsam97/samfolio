@@ -1,5 +1,22 @@
 
 const PortDetails = [
+            {
+    Title :  'Plasmafeed',
+    SubTitle: 'Filter the signal from the noise',
+    description: "View high quality messages from all your discord channels in a single feed, and stop losing on WLs, giveaways and stealth mints.",
+    date: '07 Oct, 2022',
+    info: {
+     Category: 'Web development',
+     Client: 'Plasma',
+     url: 'https://plasmafeed.com'
+    },
+    images: [
+         '../assets/img/Portfolio/plasma1.png',
+         '../assets/img/Portfolio/plasma2.png',
+         '../assets/img/Portfolio/plasma3.png',
+    ],
+    image: '../assets/img/Portfolio/plasma1.png'
+    },
     {
     Title :  'Movilla',
     SubTitle: 'A Movie based App',
@@ -18,6 +35,24 @@ const PortDetails = [
     ],
     image: '../assets/img/Portfolio/movi.png'
     },
+     {
+    Title :  'Kredi Bank',
+    SubTitle: 'Web Design',
+    description: "A web application for a fintech start up.",
+    date: '11 October. 2022',
+    info: {
+     Category: 'Web design',
+     Client: 'Kredi',
+     url: '#'
+    },
+    images: [
+         '../assets/img/Portfolio/kredi1.png',
+         '../assets/img/Portfolio/kredi2.png',
+         '../assets/img/Portfolio/kredi3.png',
+         '../assets/img/Portfolio/kredi4.png'
+    ],
+    image: '../assets/img/Portfolio/kredi1.png'
+    },
         {
     Title :  'Loom Kitchen',
     SubTitle: 'A Restaurant based App',
@@ -34,24 +69,6 @@ const PortDetails = [
          '../assets/img/Portfolio/resurant3.png',
     ],
     image: '../assets/img/Portfolio/resturant.png'
-    },
-       {
-    Title :  'Online Learning System',
-    SubTitle: 'Backend',
-    description: "A LMS that provides a user-friendly, responsive design and  intuitive interface for the learner.",
-    date: '8 April. 2021',
-    info: {
-     Category: 'Web design',
-     Client: 'Gbolahan',
-     url: '#'
-    },
-    images: [
-         '../assets/img/Portfolio/lms.png',
-         '../assets/img/Portfolio/lms (3).png',
-         '../assets/img/Portfolio/lms (2).png',
-         '../assets/img/Portfolio/movila.png'
-    ],
-    image: '../assets/img/Portfolio/lms.png'
     },
            {
     Title :  'Online Complaints System',
@@ -87,20 +104,5 @@ const PortDetails = [
     ],
     image: '../assets/img/Portfolio/bOnline2.png'
     },
-       {
-    Title :  'GIG',
-    SubTitle: 'GIG',
-    description: "My personal Portfolio",
-    date: '11 Jun, 2021',
-    info: {
-     Category: 'Web design',
-     Client: 'Freelance',
-     url: '#'
-    },
-    images: [
-         '../assets/img/Portfolio/gig.png'
-    ],
-    image: '../assets/img/Portfolio/gig.png'
-    }
 ]
 export default PortDetails;
