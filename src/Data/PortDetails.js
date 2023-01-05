@@ -43,7 +43,7 @@ const PortDetails = [
     info: {
      Category: 'Web design',
      Client: 'Kredi',
-     url: '#'
+     url: 'https://thekredibank.com/'
     },
     images: [
          '../assets/img/Portfolio/kredi1.png',
