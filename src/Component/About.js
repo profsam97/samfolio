@@ -9,7 +9,7 @@ import ProgressBar from './ProgressBar';
 const useStyle = makeStyles((theme) => ({
     container : {
         padding: 20,
-        margin: 40,
+        margin: 50,
     [theme.breakpoints.down('sm')]: {
         margin: 10,
         padding: 5
@@ -42,7 +42,7 @@ const About = () => {
                             <Typography> <b>Name :</b> Oladejo Samuel</Typography>
                             </Grid>  
                                  <Grid item xs={2}>
-                    <Typography> <b>Profile :</b> Full Stack Developer</Typography>
+                    <Typography> <b>Profile :</b> Full Stack Engineer</Typography>
                             </Grid>  
                                  <Grid item xs={2}>
                        <Typography><b>Email:</b>  proftoby97@gmail.com</Typography>        

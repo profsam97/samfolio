@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import BackToTop from './Component/BackToTop'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple } from "@mui/material/colors";
-import React, { Suspense, useContext } from "react";
+import React, {Suspense, useContext, useEffect} from "react";
 import ContextApi from "./Component/Context/ContextAPI";
 import Loading from "./Component/UI/Loading";
 function App() {
@@ -26,6 +26,9 @@ function App() {
 
     const Home = React.lazy(()=> import('./Component/Main'));
     const Details = React.lazy(()=> import('./Component/Details'));
+    useEffect(() => {
+      console.log('working')
+    }, [])
   return (
     <>
     <ThemeProvider theme={theme} >

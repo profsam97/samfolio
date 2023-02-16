@@ -5,7 +5,8 @@ import Typo from './Layout/Typo'
 import Work from './Work'
 import PortDetails from '../Data/PortDetails'
 import ContextApi from './Context/ContextAPI'
-import { SRLWrapper } from 'simple-react-lightbox';
+import {SRLWrapper} from "simple-react-lightbox";
+// import { SRLWrapper } from 'simple-react-lightbox';
 const useStyle = makeStyles(theme=>({
  container : {
         padding: 30,

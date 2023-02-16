@@ -23,20 +23,20 @@ export default function ProgressBar() {
   return (
       <Grid item container direction='column' spacing={2} mt={1}>
       <Grid item xs={3} >
-    <Typography variant='body1' sx={{marginBottom: 1}}>PHP 90%</Typography>
+    <Typography variant='body1' sx={{marginBottom: 1}}>Next.js 90%</Typography>
      <BorderLinearProgress variant="determinate" value={90} />                       
       </Grid>
        <Grid item xs={3} >
-          <Typography variant='body1' sx={{marginBottom: 1}}>JAVASCRIPT 90%</Typography>
-     <BorderLinearProgress variant="determinate" value={90} />                       
+          <Typography variant='body1' sx={{marginBottom: 1}}>Typescript 85%</Typography>
+     <BorderLinearProgress variant="determinate" value={85} />
       </Grid>
        <Grid item xs={3} >
-          <Typography variant='body1' sx={{marginBottom: 1}}>Vue.js 85%</Typography>
+          <Typography variant='body1' sx={{marginBottom: 1}}>Node.js 85%</Typography>
      <BorderLinearProgress variant="determinate" value={85} />                       
       </Grid>
        <Grid item xs={3} >
-          <Typography variant='body1' sx={{marginBottom: 1}}>Laravel 90%</Typography>
-     <BorderLinearProgress variant="determinate" value={90} />                       
+          <Typography variant='body1' sx={{marginBottom: 1}}>Docker 80%</Typography>
+     <BorderLinearProgress variant="determinate" value={80} />
       </Grid>
     </Grid>
   );

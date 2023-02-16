@@ -21,8 +21,9 @@ body {
   display: block;
   width: 100%;
   max-height: 450px;
-}.hero {
-  height: 200vh;
+}
+.hero {
+  height: 105vh !important;
   position: relative;
   color: #fff;
   background-image: url(assets/img/dark-wallpaper-30.jpg)
@@ -39,14 +40,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  max-height: 759px !important;
+  /*max-height: 759px !important;*/
   background-position: center center;
 }
-@media (max-width: 800) {
-  .bg-image {
-    max-width: 500px !important;
-  }
-}
+
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;

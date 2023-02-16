@@ -30,8 +30,8 @@ const useStyle = makeStyles({
   },
 
 })
-const pages = ['Home', 'About', 'Services', 'WORK', 'CONTACT'];
 const Nav2 = (props) => {
+  const pages  = ['Home', 'About', 'Services', 'WORK', 'CONTACT'];
   const classes = useStyle();
   const matches = useMediaQuery('(min-width:900px)');
   const [anchorElNav, setAnchorElNav] = React.useState(null);
