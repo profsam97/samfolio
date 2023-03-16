@@ -53,6 +53,24 @@ const PortDetails = [
     ],
     image: '../assets/img/Portfolio/kredi1.png'
     },
+    {
+        Title :  'Eye Can-Empowering life through AI',
+        SubTitle: 'Eyecan',
+        description: "An App that makes it easier for visually challenged people to go with their everyday tasks.",
+        date: '16 March, 2023',
+        info: {
+            Category: 'Web development',
+            Client: 'Eyecan',
+            url:  'https://eyefront.vercel.app/'
+        },
+        images: [
+            '../assets/img/Portfolio/eye.png',
+            '../assets/img/Portfolio/eye1.png',
+            '../assets/img/Portfolio/eye2.png',
+            '../assets/img/Portfolio/eye3.png',
+        ],
+        image: '../assets/img/Portfolio/eye2.png'
+    },
         {
     Title :  'Loom Kitchen',
     SubTitle: 'A Restaurant based App',
@@ -88,21 +106,6 @@ const PortDetails = [
     ],
     image: '../assets/img/Portfolio/osc1.png'
     },
-       {
-    Title :  'bOnline-The best phone System',
-    SubTitle: 'bOnline',
-    description: "Designed a rich and intuitive ui dashboard for bOnline.",
-    date: '04 March, 2021',
-    info: {
-     Category: 'Web design',
-     Client: 'bOnline',
-     url:  'https://bonline.netlify.app/about/'
-    },
-    images: [
-         '../assets/img/Portfolio/bOnline2.png',
-          '../assets/img/Portfolio/bOnline.png',
-    ],
-    image: '../assets/img/Portfolio/bOnline2.png'
-    },
+
 ]
 export default PortDetails;
